@@ -16,7 +16,7 @@ Define a function called `format_date()`, which formats a timestamp into a reada
 
 * For example, calling `format_date(1514665153, "%d-%m-%Y")` should output `30-12-2017`.
 
-Define a function called calculate_landing_time(), which calculates the estimated landing time.
+Define a function called `calculate_landing_time()`, which calculates the estimated landing time.
 
 * It must accept two parameters: `rocket_launch_dt` - the rocket launch datetime object, and `travel_duration` - the expected travel time in days as an integer.
 
