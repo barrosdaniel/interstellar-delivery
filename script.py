@@ -18,13 +18,4 @@ def format_date(timestamp: int, datetime_format: str) -> str:
     return datetime.fromtimestamp(timestamp).strftime(datetime_format)
 
 
-def main() -> None:
-    if __name__ == "__main__":
-        timestamp = 1514665153
-        datetime_format = "%d-%m-%Y"
-        print('Testing start')
-        print(format_date(timestamp, datetime_format))
-        print('Testing end')
-
-
-main()
+# def calculate_landing_time(rocket_launch_dt: datetime, travel_duration: timedelta) -> str:
