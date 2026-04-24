@@ -18,4 +18,20 @@ def format_date(timestamp: int, datetime_format: str) -> str:
     return datetime.fromtimestamp(timestamp).strftime(datetime_format)
 
 
-# def calculate_landing_time(rocket_launch_dt: datetime, travel_duration: timedelta) -> str:
+def calculate_landing_time(rocket_launch_dt: datetime, travel_duration: int) -> str:
+    """Calculates the landing time of a rocket based on its launch date and travel duration.
+
+    Args:
+        rocket_launch_dt (datetime): The launch date and time of the rocket.
+        travel_duration (int): The duration of the rocket's travel in days.
+
+    Returns:
+        str: The landing date in the format "dd-mm-yyyy".
+
+    Example:
+        >>> calculate_landing_time(datetime(2023, 2, 15), 20)
+        '07-03-2023'
+    """
+    days: timedelta = timedelta(days=travel_duration)
+    arrival: datetime = rocket_launch_dt + days
+    return arrival.strftime("%d-%m-%Y")
